@@ -1,0 +1,7 @@
+.selectable {
+  @apply cursor-pointer hover:before:scale-x-100 before:absolute before:h-[3px] before:rounded-full before:bg-[#772014] before:bottom-1 before:left-[1rem] before:w-[calc(100%-2.25rem)] before:scale-x-0 before:origin-center before:ease-in-out before:duration-300;
+}
+
+.selected {
+  @apply before:scale-x-100;
+}
