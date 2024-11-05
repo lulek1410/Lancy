@@ -12,14 +12,20 @@ interface Props extends ListItemData {
 const NavLink = ({ text, icon, selected, path }: Props) => {
   return (
     <li
-      className={classNames(`w-full relative select-none text-lg selectable`, {
+      className={classNames(`selectable`, {
         selected: selected,
       })}
     >
-      <Link href={path} className="flex gap-2 h-12 px-5 w-full items-center">
+      <div className="placeholder-container -top-3">
+        <div className="placeholder -rotate-90"></div>
+      </div>
+      <Link href={path} className="flex h-12 w-full items-center gap-2 px-5">
         <div className="text-2xl">{icon}</div>
         <p className="h-6">{text}</p>
       </Link>
+      <div className="placeholder-container -bottom-3">
+        <div className="placeholder rotate-180"></div>
+      </div>
     </li>
   );
 };
