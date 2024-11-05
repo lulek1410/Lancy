@@ -1,12 +1,12 @@
 "use client";
 
-import ListItem from "@/components/atoms/ListItem";
+import NavLink from "@/components/atoms/App/NavLink";
+import { ListItemData } from "@/components/atoms/App/NavLink/index.types";
 
 import { usePathname } from "next/navigation";
-import { IMainNavItem } from "./MainNavList.types";
 
 interface Props {
-  items: IMainNavItem[];
+  items: ListItemData[];
   className?: string;
 }
 
@@ -17,10 +17,9 @@ const MainNavList = (props: Props) => {
   return (
     <ul className={`${className || ""}`}>
       {items.map((item, index) => (
-        <ListItem
+        <NavLink
           key={index}
           {...item}
-          selectable
           selected={pathname.split("/").includes(item.text)}
         />
       ))}

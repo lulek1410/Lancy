@@ -1,6 +1,6 @@
 import MainNavList from "@/components/molecules/App/MainNavList";
 
-import { IMainNavItem } from "@/components/molecules/App/MainNavList.types";
+import { ListItemData } from "@/components/atoms/App/NavLink/index.types";
 
 import {
   LuCalendarDays,
@@ -10,12 +10,12 @@ import {
   LuUsers,
 } from "react-icons/lu";
 
-const items: IMainNavItem[] = [
-  { text: "Dashboard", icon: <LuLayoutDashboard /> },
-  { text: "Calendar", icon: <LuCalendarDays /> },
-  { text: "Clients", icon: <LuUsers /> },
-  { text: "Disc", icon: <LuFolder /> },
-  { text: "Settings", icon: <LuSettings /> },
+const items: ListItemData[] = [
+  { text: "Dashboard", icon: <LuLayoutDashboard />, path: "/" },
+  { text: "Calendar", icon: <LuCalendarDays />, path: "/calendar" },
+  { text: "Clients", icon: <LuUsers />, path: "/clients" },
+  { text: "Disc", icon: <LuFolder />, path: "/disc" },
+  { text: "Settings", icon: <LuSettings />, path: "/settings" },
 ];
 
 const MainNavbar = () => {
