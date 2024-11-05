@@ -11,7 +11,7 @@ import {
 } from "react-icons/lu";
 
 const items: ListItemData[] = [
-  { text: "Dashboard", icon: <LuLayoutDashboard />, path: "/" },
+  { text: "Dashboard", icon: <LuLayoutDashboard />, path: "/dashboard" },
   { text: "Calendar", icon: <LuCalendarDays />, path: "/calendar" },
   { text: "Clients", icon: <LuUsers />, path: "/clients" },
   { text: "Disc", icon: <LuFolder />, path: "/disc" },

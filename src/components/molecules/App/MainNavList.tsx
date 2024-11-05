@@ -20,7 +20,7 @@ const MainNavList = (props: Props) => {
         <NavLink
           key={index}
           {...item}
-          selected={pathname.split("/").includes(item.text)}
+          selected={item.path.includes(pathname)}
         />
       ))}
     </ul>
