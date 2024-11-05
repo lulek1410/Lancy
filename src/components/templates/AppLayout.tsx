@@ -13,7 +13,7 @@ const AppLayout = (props: Readonly<Props>) => {
         <aside className="w-52 xl:w-56 2xl:w-60">
           <MainNavbar />
         </aside>
-        <main>{props.children}</main>
+        <main className="bg-fantasy-50">{props.children}</main>
       </div>
     </>
   );
