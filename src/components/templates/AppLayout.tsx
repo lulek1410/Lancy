@@ -10,7 +10,7 @@ const AppLayout = (props: Readonly<Props>) => {
     <>
       <header></header>
       <div className="flex">
-        <aside className="w-44 xl:w-48 2xl:w-56">
+        <aside className="w-52 xl:w-56 2xl:w-60">
           <MainNavbar />
         </aside>
         <main>{props.children}</main>

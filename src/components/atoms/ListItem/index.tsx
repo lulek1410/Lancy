@@ -1,5 +1,5 @@
+import { IMainNavItem } from "@/components/molecules/App/MainNavList.types";
 import classNames from "classnames";
-import { ReactNode } from "react";
 
 import "./index.css";
 
@@ -17,13 +17,14 @@ type SelectableItem =
       selected?: never;
     };
 
-type Props = SelectableItem & {
-  content: string | ReactNode;
-  className?: string;
-};
+type Props = SelectableItem &
+  IMainNavItem & {
+    className?: string;
+  };
 
 const ListItem = ({
-  content,
+  text,
+  icon,
   selectable = false,
   selected,
   className,
@@ -33,14 +34,15 @@ const ListItem = ({
       className={classNames(
         `${
           className || ""
-        } px-5 h-12 flex w-full items-center relative select-none`,
+        } flex gap-2 items-center px-5 h-12 w-full relative select-none text-lg`,
         {
           selectable: selectable,
           selected: selected,
         }
       )}
     >
-      {content}
+      <div className="text-2xl">{icon}</div>
+      <p className="h-6">{text}</p>
     </li>
   );
 };

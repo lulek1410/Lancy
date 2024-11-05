@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+
 export interface IMainNavItem {
-  content: string;
+  text: string;
+  icon?: ReactNode;
 }

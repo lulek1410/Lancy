@@ -19,9 +19,9 @@ const MainNavList = (props: Props) => {
       {items.map((item, index) => (
         <ListItem
           key={index}
-          content={item.content}
+          {...item}
           selectable
-          selected={pathname.split("/").includes(item.content)}
+          selected={pathname.split("/").includes(item.text)}
         />
       ))}
     </ul>
