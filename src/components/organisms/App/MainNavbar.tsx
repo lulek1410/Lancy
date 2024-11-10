@@ -22,7 +22,7 @@ const MainNavbar = () => {
   return (
     <nav
       aria-label="Main app navigation"
-      className=" bg-gray-300 h-screen w-full flex flex-col gap-2 text-base xl:text-lg 2xl:text-xl"
+      className="flex h-full w-full flex-col gap-2 bg-gray-300 text-base xl:text-lg 2xl:text-xl"
     >
       <MainNavList items={items} />
     </nav>

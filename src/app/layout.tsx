@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${overpass.className} antialiased w-screen h-screen`}>
+      <body className={`${overpass.className} h-screen antialiased`}>
         <AppLayout>{children}</AppLayout>
       </body>
     </html>
