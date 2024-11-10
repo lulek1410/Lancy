@@ -1,8 +1,8 @@
 import React from "react";
-import { Shrikhand } from "next/font/google";
+import { Coiny } from "next/font/google";
 import Link from "next/link";
 
-const overpass = Shrikhand({
+const overpass = Coiny({
   weight: "400",
   style: "normal",
   subsets: ["latin"],
@@ -12,7 +12,7 @@ const overpass = Shrikhand({
 const Logo = () => {
   return (
     <Link
-      className={`${overpass.className} text-3xl`}
+      className={`${overpass.className} text-3xl text-gray-100`}
       aria-label="Logo"
       href={"/dashboard"}
     >
