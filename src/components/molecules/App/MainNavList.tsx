@@ -1,9 +1,9 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+
 import NavLink from "@/components/atoms/App/NavLink";
 import { ListItemData } from "@/components/atoms/App/NavLink/index.types";
-
-import { usePathname } from "next/navigation";
 
 interface Props {
   items: ListItemData[];
