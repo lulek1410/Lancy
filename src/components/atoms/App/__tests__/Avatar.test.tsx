@@ -5,7 +5,8 @@ import Avatar from "../Avatar";
 
 describe("Avatar", () => {
   it("renders avatar", () => {
-    render(<Avatar />);
-    expect(screen.getByRole("button")).toBeInTheDocument();
+    const { container } = render(<Avatar />);
+
+    expect(container.querySelector("svg")).toBeInTheDocument();
   });
 });
