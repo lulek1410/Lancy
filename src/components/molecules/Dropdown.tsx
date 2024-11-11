@@ -53,7 +53,7 @@ const Dropdown = ({ children, options }: Props) => {
               <li
                 onClick={option.action}
                 key={index}
-                className="px-6 py-2 hover:bg-gray-300"
+                className="px-6 py-2 duration-150 hover:bg-gray-300 active:bg-gray-400"
               >
                 {option.title}
               </li>
