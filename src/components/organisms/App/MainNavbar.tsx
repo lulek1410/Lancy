@@ -20,12 +20,14 @@ const items: ListItemData[] = [
 
 const MainNavbar = () => {
   return (
-    <nav
-      aria-label="Main app navigation"
-      className="flex h-full w-full flex-col gap-2 bg-gray-300 text-base xl:text-lg 2xl:text-xl"
-    >
-      <MainNavList items={items} />
-    </nav>
+    <aside className="w-52 overflow-hidden xl:w-56 2xl:w-60">
+      <nav
+        aria-label="Main app navigation"
+        className="flex h-full w-full flex-col gap-2 bg-gray-300 text-base xl:text-lg 2xl:text-xl"
+      >
+        <MainNavList items={items} />
+      </nav>
+    </aside>
   );
 };
 

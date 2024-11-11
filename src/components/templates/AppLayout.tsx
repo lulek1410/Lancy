@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import Header from "@/components/molecules/App/Header/Header";
+import Header from "@/components/organisms/App/Header/Header";
 import MainNavbar from "@/components/organisms/App/MainNavbar";
 
 interface Props {
@@ -12,9 +12,7 @@ const AppLayout = (props: Readonly<Props>) => {
     <div className="flex h-full flex-col">
       <Header />
       <div className="flex flex-1">
-        <aside className="w-52 overflow-hidden xl:w-56 2xl:w-60">
-          <MainNavbar />
-        </aside>
+        <MainNavbar />
         <main className="bg-fantasy-50">{props.children}</main>
       </div>
     </div>
