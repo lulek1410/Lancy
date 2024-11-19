@@ -1,5 +1,5 @@
 import Logo from "@/components/atoms/App/Logo";
-import AvatarDropdown from "../../../molecules/App/AvatarDropdown";
+import AvatarDropdown from "@/components/molecules/App/AvatarDropdown";
 
 const Header = () => {
   return (

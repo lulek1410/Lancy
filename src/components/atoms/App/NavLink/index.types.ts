@@ -5,3 +5,7 @@ export interface ListItemData {
   icon: ReactNode;
   path: string;
 }
+
+export interface Props extends ListItemData {
+  selected: boolean;
+}

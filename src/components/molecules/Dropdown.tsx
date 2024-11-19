@@ -1,15 +1,10 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { Option } from "@/types/global";
+import { Props } from "./Dropdown.types";
 
 import "./Dropdown.css";
-
-interface Props {
-  children: ReactNode;
-  options: Option[];
-}
 
 const Dropdown = ({ children, options }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,11 +12,6 @@ const Dropdown = ({ children, options }: Props) => {
 
   useEffect(() => {
     const checkIfClickedOutside = (e: MouseEvent) => {
-      console.log(
-        "Clicked outside?",
-        !dropdownRef.current?.contains(e.target as Node),
-      );
-      console.log("if ", dropdownRef.current);
       if (
         dropdownRef.current &&
         !dropdownRef.current.contains(e.target as Node)

@@ -1,13 +1,9 @@
 import classNames from "classnames";
 import Link from "next/link";
 
-import { ListItemData } from "./index.types";
+import { Props } from "./index.types";
 
 import "./index.css";
-
-interface Props extends ListItemData {
-  selected: boolean;
-}
 
 const NavLink = ({ text, icon, selected, path }: Props) => {
   return (
