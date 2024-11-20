@@ -2,10 +2,11 @@ import { render, screen } from "@testing-library/react";
 import { describe } from "node:test";
 
 import Header from "../Header";
-import Avatar from "@/components/atoms/App/Avatar";
 import Logo from "@/components/atoms/App/Logo";
+import AvatarDropdown from "@/components/molecules/App/AvatarDropdown";
 
-jest.mock("@/components/atoms/App/Avatar");
+jest.mock("@/components/molecules/App/AvatarDropdown");
+jest.mock("@/components/atoms/App/Logo");
 jest.mock("@/components/atoms/App/Logo");
 
 describe("Header", () => {
@@ -14,6 +15,6 @@ describe("Header", () => {
 
     expect(screen.getByRole("banner")).toBeInTheDocument();
     expect(Logo).toHaveBeenCalledTimes(1);
-    expect(Avatar).toHaveBeenCalledTimes(1);
+    expect(AvatarDropdown).toHaveBeenCalledTimes(1);
   });
 });
