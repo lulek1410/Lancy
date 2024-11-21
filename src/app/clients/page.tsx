@@ -1,7 +1,8 @@
+import ClientsLayout from "@/components/templates/ClientsLayout";
 import React from "react";
 
 const page = () => {
-  return <div>Clients</div>;
+  return <ClientsLayout />;
 };
 
 export default page;

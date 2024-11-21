@@ -13,7 +13,7 @@ const AppLayout = (props: Readonly<Props>) => {
       <Header />
       <div className="flex flex-1">
         <MainNavbar />
-        <main className="bg-fantasy-50">{props.children}</main>
+        <main className="flex-1 bg-fantasy-50">{props.children}</main>
       </div>
     </div>
   );
