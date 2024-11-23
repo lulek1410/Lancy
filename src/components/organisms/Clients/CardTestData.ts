@@ -6,9 +6,8 @@ export const testCardInfoData: CardInfo[] = [
     name: "John",
     surname: "Doe",
     level: "Intermediate",
-    pricePerHour: "€30",
-    cyclicalLessonsWeekday: "Wednesday",
-    cyclicalLessonsTime: "10:00",
+    lessonsWeekday: "Wednesday",
+    lessonsTime: "10:00",
     lessonDuration: "1 hour",
     lessonsExceptions: [
       {
@@ -27,9 +26,8 @@ export const testCardInfoData: CardInfo[] = [
     name: "Jane",
     surname: "Smith",
     level: "Beginner",
-    pricePerHour: "€25",
-    cyclicalLessonsWeekday: "Wednesday",
-    cyclicalLessonsTime: "14:00",
+    lessonsWeekday: "Wednesday",
+    lessonsTime: "14:00",
     lessonDuration: "45 minutes",
     lessonsExceptions: [
       {
@@ -37,15 +35,15 @@ export const testCardInfoData: CardInfo[] = [
         newLessonDateTimeDuration: null,
       },
     ],
+    info: null,
   },
   {
     id: 3,
     name: "Alice",
     surname: "Johnson",
     level: "Advanced",
-    pricePerHour: "€40",
-    cyclicalLessonsWeekday: "Friday",
-    cyclicalLessonsTime: "16:00",
+    lessonsWeekday: "Friday",
+    lessonsTime: "16:00",
     lessonDuration: "1.5 hours",
     lessonsExceptions: [
       {
@@ -64,9 +62,8 @@ export const testCardInfoData: CardInfo[] = [
     name: "Bob",
     surname: "Williams",
     level: "Beginner",
-    pricePerHour: "€20",
-    cyclicalLessonsWeekday: "Thursday",
-    cyclicalLessonsTime: "18:30",
+    lessonsWeekday: "Thursday",
+    lessonsTime: "18:30",
     lessonDuration: "30 minutes",
     lessonsExceptions: [],
     info: "Patient and supportive teaching style.",
@@ -76,9 +73,8 @@ export const testCardInfoData: CardInfo[] = [
     name: "Emily",
     surname: "Brown",
     level: "Intermediate",
-    pricePerHour: "€35",
-    cyclicalLessonsWeekday: "Tuesday",
-    cyclicalLessonsTime: "09:00",
+    lessonsWeekday: "Tuesday",
+    lessonsTime: "09:00",
     lessonDuration: "1 hour",
     lessonsExceptions: [
       {
@@ -90,5 +86,6 @@ export const testCardInfoData: CardInfo[] = [
         newLessonDateTimeDuration: "02.01.2025 9:00-10:00",
       },
     ],
+    info: null,
   },
 ];

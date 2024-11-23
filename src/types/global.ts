@@ -15,10 +15,9 @@ export interface CardInfo {
   name: string;
   surname: string;
   level: string;
-  pricePerHour: string;
-  cyclicalLessonsWeekday: string;
-  cyclicalLessonsTime: string;
+  lessonsWeekday: string;
+  lessonsTime: string;
   lessonDuration: string;
   lessonsExceptions: LessonException[];
-  info?: string;
+  info: string | null;
 }
