@@ -18,16 +18,18 @@ const Card = ({ cardInfo }: Props) => {
       <p>
         {cardInfo.cyclicalLessonsWeekday} {cardInfo.cyclicalLessonsTime}
       </p>
-      {cardInfo.lessonsExceptions.map((exception) => (
-        <p className="flex items-center gap-1">
-          <span className="inline-block align-middle line-through">
+      {cardInfo.lessonsExceptions.map((exception, index) => (
+        <p className="flex items-center gap-1" key={index}>
+          <span className="text-milano-red-700">
             {exception.lessonDateTimeDuration}
           </span>
           {exception.newLessonDateTimeDuration &&
           exception.lessonDateTimeDuration ? (
             <FaArrowRight className="mb-1 text-xs" />
           ) : null}
-          <span inline-block>{exception.newLessonDateTimeDuration}</span>
+          <span className="text-green-800">
+            {exception.newLessonDateTimeDuration}
+          </span>
         </p>
       ))}
     </div>
