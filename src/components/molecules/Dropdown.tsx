@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 import { Props } from "./Dropdown.types";
 
-import "./Dropdown.css";
-
 const Dropdown = ({ children, options }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -36,7 +34,7 @@ const Dropdown = ({ children, options }: Props) => {
           onClick={(e) => e.stopPropagation()}
           ref={dropdownRef}
           role="menu"
-          className="arrowUp absolute left-1/2 -translate-x-1/2"
+          className="absolute left-1/2 -translate-x-1/2 before:mx-auto before:block before:size-0 before:border-b-8 before:border-l-8 before:border-r-8 before:border-b-gray-200 before:border-l-transparent before:border-r-transparent"
         >
           <ul className="overflow-hidden rounded-md bg-gray-200">
             {options.map((option, index) => (
