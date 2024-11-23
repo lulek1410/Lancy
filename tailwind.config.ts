@@ -78,6 +78,9 @@ const config: Config = {
           "950": "#082549",
         },
       },
+      screens: {
+        "3xl": "1860px",
+      },
     },
   },
   plugins: [],
