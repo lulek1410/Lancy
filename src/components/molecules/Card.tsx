@@ -10,29 +10,42 @@ interface Props {
 
 const Card = ({ cardInfo }: Props) => {
   return (
-    <div className="flex flex-col items-center gap-2 rounded-lg bg-governor-bay-100 p-3">
-      <span>{cardInfo.name}</span>
-      <p>{cardInfo.surname}</p>
-      <p>{cardInfo.level}</p>
-      <p>{cardInfo.pricePerHour}</p>
-      <p>
-        {cardInfo.cyclicalLessonsWeekday} {cardInfo.cyclicalLessonsTime}
-      </p>
-      {cardInfo.lessonsExceptions.map((exception, index) => (
-        <p className="flex items-center gap-1" key={index}>
-          <span className="text-milano-red-700">
-            {exception.lessonDateTimeDuration}
-          </span>
-          {exception.newLessonDateTimeDuration &&
-          exception.lessonDateTimeDuration ? (
-            <FaArrowRight className="mb-1 text-xs" />
-          ) : null}
-          <span className="text-green-800">
-            {exception.newLessonDateTimeDuration}
-          </span>
-        </p>
-      ))}
-    </div>
+    <section
+      className="rounded-lg bg-governor-bay-100 p-3"
+      aria-labelledby={`card-title-${cardInfo.name}-${cardInfo.surname}`}
+    >
+      <div className="flex flex-col items-center">
+        <h3 className="mb-2 text-center">
+          {cardInfo.name} {cardInfo.surname}
+        </h3>
+        <div className="mb-2 grid grid-cols-[60px_minmax(0,1fr)] items-center gap-x-3">
+          <p>Lessons:</p>
+          <p>
+            {cardInfo.cyclicalLessonsWeekday} at {cardInfo.cyclicalLessonsTime}
+          </p>
+          <p>Level:</p>
+          <p>{cardInfo.level}</p>
+        </div>
+        {cardInfo.lessonsExceptions.length ? <p>Changed lessons:</p> : null}
+        {cardInfo.lessonsExceptions.map((exception, index) => (
+          <p className="flex items-center gap-1" key={index}>
+            <time className="text-milano-red-800" aria-label="removed-lesson">
+              {exception.lessonDateTimeDuration}
+            </time>
+            {exception.newLessonDateTimeDuration &&
+            exception.lessonDateTimeDuration ? (
+              <>
+                <FaArrowRight className="mb-1 text-xs" aria-hidden="true" />
+                <span className="sr-only">Changes to</span>
+              </>
+            ) : null}
+            <time className="text-green-800" aria-label="new-lesson">
+              {exception.newLessonDateTimeDuration}
+            </time>
+          </p>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -7,7 +7,7 @@ export const testCardInfoData: CardInfo[] = [
     surname: "Doe",
     level: "Intermediate",
     pricePerHour: "€30",
-    cyclicalLessonsWeekday: "Monday",
+    cyclicalLessonsWeekday: "Wednesday",
     cyclicalLessonsTime: "10:00",
     lessonDuration: "1 hour",
     lessonsExceptions: [
