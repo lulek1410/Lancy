@@ -11,7 +11,7 @@ interface Props {
 const Card = ({ cardInfo }: Props) => {
   return (
     <section
-      className="rounded-lg bg-governor-bay-100 p-3"
+      className="rounded-lg bg-[radial-gradient(circle_at_top_left,#7ec1fb_10%,#badcfd_10%,#badcfd_20%,#e0eefe_20%)] p-3 shadow-md"
       aria-labelledby={`card-title-${cardInfo.name}-${cardInfo.surname}`}
     >
       <div className="flex flex-col items-center">
