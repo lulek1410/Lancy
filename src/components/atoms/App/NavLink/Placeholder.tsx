@@ -16,9 +16,10 @@ const Placeholder = ({ isVisible, position }: Props) => {
     >
       <div
         className={classNames(
-          "relative h-3 w-3 overflow-hidden before:absolute before:bottom-0 before:left-0 before:block before:h-6 before:w-6 before:rounded-[50%] before:shadow-[-0.75rem_0.75rem_0_0_red] before:shadow-transparent before:duration-150",
+          "relative h-3 w-3 overflow-hidden before:absolute before:bottom-0 before:left-0 before:block before:h-6 before:w-6 before:rounded-[50%] before:shadow-[-0.75rem_0.75rem_0_0_red] before:duration-150",
           {
             "before:shadow-fantasy-50": isVisible,
+            "before:shadow-transparent": !isVisible,
             "-rotate-90": position === "top",
             "rotate-180": position === "bottom",
           },
